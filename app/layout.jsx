@@ -1,6 +1,4 @@
 import '@styles/globals.css';
-import { Root } from 'postcss';
-import { Children } from 'react/cjs/react.production.min';
 //import the CSS to the entire application 
 
 export const metadata = {
@@ -9,15 +7,15 @@ export const metadata = {
     //change the METADATA
 }
 
-const RootLayout = () => {  //rename layout for RootLayout to sticking with the rules of naming React components
+const RootLayout = ({ children }) => {  //rename layout for RootLayout to sticking with the rules of naming React components
   return (
     <html lang='en'>
         <body>
             <div className='main'>
-                <div className='gradient'/> !--Change background--
+                <div className='gradient'/> 
             </div>
-            <main className='app'> !--within it we want to render all the children--
-                {Children}
+            <main className='app'> 
+                { children }
             </main>
         </body>
     </html>
@@ -26,4 +24,4 @@ const RootLayout = () => {  //rename layout for RootLayout to sticking with the 
   )
 }
 
-export default RootLayout
+export default RootLayout;
