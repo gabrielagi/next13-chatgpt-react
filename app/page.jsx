@@ -1,4 +1,6 @@
-export const Home = () => {
+import Feed from "@components/Feed"
+
+const Home = () => {
   return (
     <section className="w-full flex-center flex-col">
       <h1 className="head_text text-center">
@@ -8,6 +10,7 @@ export const Home = () => {
       </h1>
       <p className="desc text-center">Prompsai es una herramienta de avisos alimentada por IA para lograr
       descubrir, crear y compartir resoluciones o ideas creativas</p>
+      <Feed />
     </section>
     /* FEED */
   )
