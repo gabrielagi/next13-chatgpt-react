@@ -1,6 +1,10 @@
 import '@styles/globals.css';
 //import the CSS to the entire application 
 
+import Nav from '@components/Nav';
+import Provider from '@components/Provider';
+import Feed from '@components/Feed';
+
 export const metadata = {
     title: "Prompsai",
     description: 'Discover & Share AI Prompts'
@@ -15,6 +19,7 @@ const RootLayout = ({ children }) => {  //rename layout for RootLayout to sticki
                 <div className='gradient'/> 
             </div>
             <main className='app'> 
+                <Nav />
                 { children }
             </main>
         </body>
