@@ -23,8 +23,24 @@ const Nav = () => {
       {/*Mobile Navigation*/}
       <div className="sm:flex hidden">
         {isUserLoggedIn ? (
-          <div>
-            
+          <div className="flex gap-3 md:gap-5">
+            <Link href="/create-prompt" className="black_btn">
+              Create <Post></Post>
+            </Link>
+
+            <button type="button" onClick={signOut} className="outline_btn">
+              Sign out
+            </button>
+
+            <Link href="/profile">
+              <Image
+                src="/assets/mages/profile.svg"
+                width={37}
+                height={37}
+                className="rounded-full"
+                alt="profile"
+              />
+            </Link>
           </div>
         ) : (
           <> 
