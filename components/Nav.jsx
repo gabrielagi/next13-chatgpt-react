@@ -23,17 +23,18 @@ const Nav = () => {
   }, [])
 
   return (
-    <nav className="felx-between w-full mb-16 pt-3">
-      <Link href='/' className="flex gap-2 flex-center">
-        <Image 
-          src="/assets/images/logo.svg"
-          alt="Prompsai logo"
-          width={30}
-          height={30}
-          className="object-contain"
-        />
-        <p className="logo-text">Prompsai</p>
-      </Link>
+    <nav className='flex-between w-full mb-16 pt-3'>
+    <Link href='/' className='flex gap-2 flex-center'>
+      <Image
+        src='/assets/images/logo.svg'
+        alt='logo'
+        width={30}
+        height={30}
+        className='object-contain'
+      />
+      <p className='logo_text'>Promptopia</p>
+    </Link>
+
 
       {/*Desktop Navigation*/}
       <div className="sm:flex hidden">
@@ -108,20 +109,20 @@ const Nav = () => {
                   </Link>
 
                   <button
-                  type="button"
+                  type='button'
                   onClick={() => {
-                    setTogglerDropdown(false);
+                    setToggleDropdown(false);
                     signOut();
                   }}
-                  className="mt-5 w-full black-btn"
-                  >
-                    Sign Out
-                  </button>
+                  className='mt-5 w-full black_btn'
+                >
+                  Sign Out
+                </button>
                 </div>
               )}
           </div>
         ) : (
-<> 
+          <> 
           {providers && Object.values(providers).map((provider) => (
             <button
             type="button"
